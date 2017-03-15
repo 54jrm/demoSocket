@@ -19,7 +19,6 @@ public class ServerThread extends Thread{
 		InputStream is =null;
 		InputStreamReader isr=null;
 		BufferedReader br=null;
-		// 4.服务器输出回复给客户端 欢迎
 		OutputStream os=null;
 		PrintWriter pw=null;
 		try {
@@ -34,7 +33,6 @@ public class ServerThread extends Thread{
 					username = info.substring(2, 4);
 				}
 			}
-			// 3.关闭输入流 
 			socket.shutdownInput();
 			os = socket.getOutputStream();
 			pw = new PrintWriter(os);
